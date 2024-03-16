@@ -1,0 +1,49 @@
+<resources>
+    <string name="language_prompt">Selecciona un idioma:</string>
+    <string-array name="language_options">
+        <item>Castellano</item>
+        <item>Euskera</item>
+        <item>Ingles</item>
+    </string-array>
+    <string name="app_name" translatable="false">RedactBook</string>
+    <string name="escoger_idioma">Elige el idioma de uso:</string>
+    <string name="redactbook" translatable="false">RedactBook</string>
+    <string name="añadir_libro">Añadir Libro</string>
+    <string name="menu">Menu</string>
+    <string name="editar_libro">Editar libro</string>
+    <string name="titulo">Titulo:</string>
+    <string name="p_ginas">Páginas:</string>
+    <string name="valoraci_n">Valoración:</string>
+    <string name="editar">Editar</string>
+    <string name="borrar">Borrar</string>
+    <string name="guardar">Guardar</string>
+    <string name="borrar_datos">Borrar Datos</string>
+    <string name="cambiar_fondo">Cambiar Fondo</string>
+    <string name="modo_claro">Modo Claro</string>
+    <string name="modo_oscuro">Modo Oscuro</string>
+    <string name="borrar_bbdd">Borrar BBDD</string>
+    <string name="ingl_s">Inglés</string>
+    <string name="euskera">Euskera</string>
+    <string name="espa_ol">Español</string>
+    <string name="elegir_idioma">Elegir idioma</string>
+    <string name="cambiar_modo">Cambiar fondo</string>
+    <string name="delete_database_title">Borrar Base de Datos</string>
+    <string name="delete_database_message">¿Está seguro de que desea borrar toda la base de datos?</string>
+    <string name="delete_database_yes">Si</string>
+    <string name="delete_database_no">No</string>
+    <string name="database_deleted">Base de datos borrada</string>
+    <string name="valoraci_n_0">Valoración: 0</string>
+    <string name="confirm_edit_title">Editar Libro</string>
+    <string name="confirm_edit_message">¿Está seguro de que desea editar este libro?</string>
+    <string name="confirm_save_changes">Guardar Cambios</string>
+    <string name="confirm_save_message">¿Está seguro de que desea guardar los cambios?</string>
+    <string name="confirm_edit_button">Editar</string>
+    <string name="cancel_button">Cancelar</string>
+    <string name="save_button">Guardar</string>
+    <string name="rating_warning">Rellene correctamente todos los campos</string>
+    <string name="configuraci_n">Configuración</string>
+    <string name="borrar_libro">Borrar libro</string>
+    <string name="borrar_libro_message">¿Seguro que quieres borrar este libro?</string>
+    <string name="completar">Por favor, rellene todos los campos</string>
+    <string name="borrar_datos_bot">Borrar datos</string>
+</resources>

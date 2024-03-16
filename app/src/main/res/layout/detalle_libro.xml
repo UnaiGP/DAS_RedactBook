@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?attr/itemTextColor"
+        android:text="@string/editar_libro"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textTitulo"
+        style="?attr/itemTextColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo"
+        android:textSize="16sp"
+        android:layout_below="@id/textEditar"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/textPaginas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/p_ginas"
+        android:textSize="16sp"
+        style="?attr/itemTextColor"
+        android:layout_below="@id/textTitulo"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/textValoracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valoraci_n"
+        android:textSize="16sp"
+        style="?attr/itemTextColor"
+        android:layout_below="@id/textPaginas"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp" />
+
+    <EditText
+        android:id="@+id/editTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTitulo"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/titulo"
+        style="?attr/editTextStyle"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:visibility="invisible"
+        android:enabled="false" />
+
+    <EditText
+        android:id="@+id/editPaginas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTitulo"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/p_ginas"
+        android:inputType="number"
+        style="?attr/editTextStyle"
+        android:minHeight="48dp"
+        android:visibility="invisible"
+        android:enabled="false" />
+
+    <EditText
+        android:id="@+id/editValoracion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editPaginas"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/valoraci_n"
+        android:inputType="number"
+        android:minHeight="48dp"
+        style="?attr/editTextStyle"
+        android:visibility="invisible"
+        android:enabled="false" />
+
+
+    <Button
+        android:id="@+id/btnEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/editar"
+        style="?attr/buttonStyle"
+        android:layout_below="@id/textValoracion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/btnBorrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/borrar"
+        style="?attr/buttonStyle"
+        android:layout_below="@id/btnEditar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/guardar"
+        style="?attr/buttonStyle"
+        android:layout_below="@id/editValoracion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" />
+
+
+
+    <Button
+        android:id="@+id/botonVolver"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        style="?attr/buttonStyle"
+        android:layout_marginEnd="16dp"
+        android:drawableStart="@android:drawable/ic_menu_more"
+        android:onClick="onVolver"
+        android:background="@drawable/ic_home"
+        android:text="@string/menu" />
+
+</RelativeLayout>

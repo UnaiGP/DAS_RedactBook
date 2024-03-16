@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_prompt">Select a language:</string>
+    <string name="escoger_idioma">Choose the language of use:</string>
+    <string name="menu">Menu</string>
+    <string name="editar_libro">Edit book</string>
+    <string name="titulo">Title:</string>
+    <string name="p_ginas">Pages:</string>
+    <string name="valoraci_n">Rating:</string>
+    <string name="editar">Edit</string>
+    <string name="borrar">Delete</string>
+    <string name="guardar">Save</string>
+    <string name="borrar_datos">Delete Data</string>
+    <string name="cambiar_fondo">Change Background</string>
+    <string name="modo_claro">Light mode</string>
+    <string name="modo_oscuro">Dark mode</string>
+    <string name="borrar_bbdd">Delete DB</string>
+    <string name="euskera">Basque</string>
+    <string name="espa_ol">Spanish</string>
+    <string name="ingl_s">English</string>
+    <string name="elegir_idioma">"Choose Language "</string>
+    <string name="cambiar_modo">"Change background "</string>
+    <string name="delete_database_title">Database Delete</string>
+    <string name="delete_database_message">Are you sure you want to delete the entire database?</string>
+    <string name="delete_database_yes">Yes</string>
+    <string name="delete_database_no">No</string>
+    <string name="database_deleted">"Deleted database "</string>
+    <string name="añadir_libro">Add Book</string>
+    <string name="valoraci_n_0">Rating: 0</string>
+    <string name="confirm_edit_title">Edit book</string>
+    <string name="confirm_edit_message">"Are you sure you want to edit this book? "</string>
+    <string name="confirm_save_changes">"Save Changes "</string>
+    <string name="confirm_save_message">"Are you sure you want to save your changes? "</string>
+    <string name="confirm_edit_button">Edit</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="save_button">Save</string>
+    <string name="rating_warning">"The rating must be between 0 and 10 "</string>
+    <string name="configuraci_n">Settings</string>
+    <string name="borrar_libro">Delete book</string>
+    <string name="borrar_libro_message">Are you sure that you want to delete this book?</string>
+    <string name="completar">" Please fill out all fields"</string>
+    <string name="borrar_datos_bot">Delete Database</string>
+</resources>

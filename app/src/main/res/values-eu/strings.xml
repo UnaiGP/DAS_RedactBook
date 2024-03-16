@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="escoger_idioma">Aukeratu erabilera hizkuntza:</string>
+    <string name="language_prompt">Aukeratu hizkuntza bat:</string>
+    <string name="menu">Menua</string>
+    <string name="editar_libro">Editatu liburua</string>
+    <string name="titulo">Titulua:</string>
+    <string name="p_ginas">"Orrialdeak: "</string>
+    <string name="valoraci_n">Ebaluazioa:</string>
+    <string name="editar">Editatu</string>
+    <string name="borrar">Ezabatu</string>
+    <string name="guardar">Gorde</string>
+    <string name="borrar_datos">Ezabatu Data</string>
+    <string name="cambiar_fondo">Aldatu atzealdea</string>
+    <string name="modo_claro">"Garbi modua "</string>
+    <string name="modo_oscuro">Modu iluna</string>
+    <string name="borrar_bbdd">Ezabatu DB</string>
+    <string name="euskera">Euskara</string>
+    <string name="espa_ol">Gaztelera</string>
+    <string name="ingl_s">Ingelera</string>
+    <string name="elegir_idioma">Aukeratu hizkuntza:</string>
+    <string name="cambiar_modo">Aldatu atzealdea</string>
+    <string name="delete_database_title">Ezabatu da datu-basea</string>
+    <string name="delete_database_message">Ziur datu-base osoa ezabatu nahi duzula?</string>
+    <string name="delete_database_yes">Bai</string>
+    <string name="delete_database_no">Ez</string>
+    <string name="database_deleted">Datu-basea ezabatuta</string>
+    <string name="añadir_libro">"Gehitu liburua"</string>
+    <string name="valoraci_n_0">Ebaluazioa: 0</string>
+    <string name="confirm_edit_title">Editatu liburua</string>
+    <string name="confirm_edit_message">"Ziur liburu hau editatu nahi duzula? "</string>
+    <string name="confirm_save_changes">"Aldaketak gorde "</string>
+    <string name="confirm_save_message">" Ziur aldaketak gorde nahi dituzula?"</string>
+    <string name="confirm_edit_button">Editatu</string>
+    <string name="cancel_button">Utzi</string>
+    <string name="save_button">Gorde</string>
+    <string name="rating_warning">Balorazioa 0 eta 10 artekoa izan behar da</string>
+    <string name="configuraci_n">Konfigurazioa</string>
+    <string name="borrar_libro">Ezabatu liburura</string>
+    <string name="borrar_libro_message">Seguru zaude liburua ezabatu nahi duzula?</string>
+    <string name="completar">Mesedez, bete eremu guztiak</string>
+    <string name="borrar_datos_bot">Ezabatu DatuBasea</string>
+</resources>
