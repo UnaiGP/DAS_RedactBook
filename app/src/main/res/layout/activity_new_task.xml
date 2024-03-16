@@ -1,58 +1,98 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- TextView para mostrar el nombre de la aplicación -->
     <TextView
+        android:id="@+id/appNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/añadir_libro"
-        style="?attr/itemTextColor"
+        android:text="@string/redactbook"
         android:textSize="24sp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="16dp"/>
+        style="?attr/itemTextColor"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        tools:visibility="visible" />
 
+    <!-- EditText para ingresar el título del libro -->
     <EditText
         android:id="@+id/editTextTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_below="@id/appNameTextView"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         style="?attr/editTextStyle"
         android:hint="@string/titulo"
         android:minHeight="48dp"/>
 
+    <!-- EditText para ingresar el número de páginas del libro -->
     <EditText
         android:id="@+id/editTextPages"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_below="@id/editTextTitle"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         style="?attr/editTextStyle"
         android:hint="@string/p_ginas"
         android:inputType="number"
         android:minHeight="48dp"/>
 
+    <!-- SeekBar para seleccionar la valoración del libro -->
     <SeekBar
         android:id="@+id/seekBarRating"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPages"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:max="10" />
 
+    <!-- TextView para mostrar la valoración seleccionada -->
     <TextView
         android:id="@+id/textViewRating"
-        android:layout_width="wrap_content"
         style="?attr/itemTextColor"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/valoraci_n_0"
+        android:layout_below="@id/seekBarRating"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"/>
 
+    <!-- Botón para guardar el libro -->
     <Button
         android:id="@+id/buttonSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/textViewRating"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         style="?attr/buttonStyle"
         android:text="@string/guardar"/>
 
+    <!-- Botón Volver -->
+    <Button
+        android:id="@+id/botonVolver"
+        style="?attr/buttonStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_home"
+        android:drawableStart="@drawable/ic_home"
+        android:text="Volver"
+        android:onClick="onVolver"
+        tools:ignore="TextSizeCheck" />
 
-</LinearLayout>
+</RelativeLayout>

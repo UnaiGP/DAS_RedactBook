@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Define el diseño de la pantalla de configuración -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Layout que contiene los elementos centrados verticalmente -->
     <LinearLayout
         android:id="@+id/centered_layout"
         android:layout_width="wrap_content"
@@ -12,6 +14,7 @@
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
+        <!-- Título de la aplicación -->
         <TextView
             android:id="@+id/appNameTextView"
             android:layout_width="wrap_content"
@@ -23,6 +26,7 @@
             android:layout_gravity="center"
             tools:visibility="visible" />
 
+        <!-- Texto para seleccionar idioma -->
         <TextView
             android:id="@+id/language_selection_text"
             android:layout_width="wrap_content"
@@ -32,6 +36,7 @@
             android:textSize="18sp"
             android:layout_marginBottom="16dp" />
 
+        <!-- Botones para seleccionar idioma -->
         <Button
             android:id="@+id/btn_spanish"
             android:layout_width="wrap_content"
@@ -56,6 +61,7 @@
             style="?attr/buttonStyle"
             android:layout_marginBottom="16dp"/>
 
+        <!-- Texto para borrar datos -->
         <TextView
             android:id="@+id/borrar_text"
             android:layout_width="wrap_content"
@@ -65,6 +71,7 @@
             android:textSize="18sp"
             android:layout_marginBottom="16dp" />
 
+        <!-- Botón para borrar datos -->
         <Button
             android:id="@+id/btn_delete_data"
             android:layout_width="wrap_content"
@@ -73,6 +80,7 @@
             android:text="@string/borrar_datos_bot"
             android:layout_marginBottom="16dp"/>
 
+        <!-- Texto para cambiar modo -->
         <TextView
             android:id="@+id/text_switch_label"
             android:layout_width="wrap_content"
@@ -82,6 +90,7 @@
             android:textSize="18sp"
             android:layout_marginBottom="8dp" />
 
+        <!-- Interruptor para cambiar entre modos claro y oscuro -->
         <Switch
             android:id="@+id/switch_dark_mode"
             android:layout_width="wrap_content"
@@ -96,6 +105,7 @@
 
     </LinearLayout>
 
+    <!-- Botón para volver atrás -->
     <Button
         android:id="@+id/botonVolver"
         style="?attr/buttonStyle"

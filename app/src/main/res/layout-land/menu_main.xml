@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Diseño centrado -->
     <LinearLayout
         android:id="@+id/centered_layout"
         android:layout_width="match_parent"
@@ -12,6 +13,7 @@
         android:orientation="vertical"
         android:gravity="center">
 
+        <!-- Título de la aplicación -->
         <TextView
             android:id="@+id/appNameTextView"
             android:layout_width="wrap_content"
@@ -23,6 +25,7 @@
             android:layout_gravity="center"
             tools:visibility="visible" />
 
+        <!-- Selector de idioma -->
         <TextView
             android:id="@+id/language_selection_text"
             android:layout_width="wrap_content"
@@ -32,7 +35,7 @@
             android:textSize="18sp"
             android:layout_marginBottom="16dp" />
 
-        <!-- Cambiamos el LinearLayout que contiene los botones de idioma a horizontal -->
+        <!-- Botones de idioma -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,6 +43,7 @@
             android:gravity="center"
             android:weightSum="1">
 
+            <!-- Botón Español -->
             <Button
                 android:id="@+id/btn_spanish"
                 android:layout_width="0dp"
@@ -49,6 +53,7 @@
                 style="?attr/buttonStyle"
                 android:layout_marginEnd="8dp"/>
 
+            <!-- Botón Inglés -->
             <Button
                 android:id="@+id/btn_english"
                 android:layout_width="0dp"
@@ -58,6 +63,7 @@
                 style="?attr/buttonStyle"
                 android:layout_marginEnd="8dp"/>
 
+            <!-- Botón Euskera -->
             <Button
                 android:id="@+id/btn_euskera"
                 android:layout_width="0dp"
@@ -69,8 +75,7 @@
         </LinearLayout>
         <!-- Fin de los botones de idioma -->
 
-        <!-- Resto de tu interfaz aquí -->
-
+        <!-- Texto para borrar datos -->
         <TextView
             android:id="@+id/borrar_text"
             android:layout_width="wrap_content"
@@ -80,6 +85,7 @@
             android:textSize="18sp"
             android:layout_marginBottom="16dp" />
 
+        <!-- Botón para borrar datos -->
         <Button
             android:id="@+id/btn_delete_data"
             android:layout_width="wrap_content"
@@ -88,6 +94,7 @@
             android:text="@string/borrar_datos_bot"
             android:layout_marginBottom="16dp"/>
 
+        <!-- Etiqueta de cambio de modo -->
         <TextView
             android:id="@+id/text_switch_label"
             android:layout_width="wrap_content"
@@ -97,6 +104,7 @@
             android:textSize="18sp"
             android:layout_marginBottom="8dp" />
 
+        <!-- Interruptor de modo oscuro/mode claro -->
         <Switch
             android:id="@+id/switch_dark_mode"
             android:layout_width="wrap_content"

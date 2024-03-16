@@ -5,6 +5,7 @@
     android:orientation="horizontal"
     android:padding="16dp">
 
+    <!-- TextView para mostrar el título del libro -->
     <TextView
         android:id="@+id/titleTextView"
         android:layout_width="0dp"
@@ -13,6 +14,7 @@
         android:textSize="18sp"
         android:textStyle="bold"/>
 
+    <!-- TextView para mostrar el número de páginas del libro -->
     <TextView
         android:id="@+id/pagesTextView"
         android:layout_width="0dp"
@@ -21,12 +23,14 @@
         android:textSize="18sp"
         android:textStyle="bold"/>
 
+    <!-- LinearLayout que contiene las estrellas de valoración -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="end">
 
+        <!-- ImageView para la primera estrella -->
         <ImageView
             android:id="@+id/star1"
             android:layout_width="wrap_content"
@@ -35,6 +39,7 @@
             android:layout_marginStart="8dp"
             android:maxWidth="2dp"/>
 
+        <!-- ImageView para la segunda estrella -->
         <ImageView
             android:id="@+id/star2"
             android:layout_width="wrap_content"
@@ -43,6 +48,7 @@
             android:layout_marginStart="8dp"
             android:maxWidth="2dp"/>
 
+        <!-- ImageView para la tercera estrella -->
         <ImageView
             android:id="@+id/star3"
             android:layout_width="wrap_content"
@@ -51,6 +57,7 @@
             android:layout_marginStart="8dp"
             android:maxWidth="2dp"/>
 
+        <!-- ImageView para la cuarta estrella -->
         <ImageView
             android:id="@+id/star4"
             android:layout_width="wrap_content"
@@ -59,6 +66,7 @@
             android:layout_marginStart="8dp"
             android:maxWidth="2dp"/>
 
+        <!-- ImageView para la quinta estrella -->
         <ImageView
             android:id="@+id/star5"
             android:layout_width="wrap_content"

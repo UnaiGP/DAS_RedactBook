@@ -27,6 +27,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Declaración de variables miembro
     private DatabaseHelper dbHelper;
     private ArrayList<Libro> listaLibros;
     private ArrayAdapter<Libro> adaptador;
@@ -35,27 +36,34 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Obtener preferencias de la aplicación
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         boolean isDarkModeEnabled = prefs.getBoolean(Configuracion.DARK_MODE_PREF, false);
 
+        // Establecer tema de acuerdo al modo seleccionado
         if (isDarkModeEnabled) {
             setTheme(R.style.AppTheme_Dark);
         } else {
             setTheme(R.style.AppTheme_Light);
         }
 
+        // Establecer el diseño de la actividad principal
         setContentView(R.layout.activity_main);
 
+        // Inicializar el objeto DatabaseHelper y obtener la lista de libros
         dbHelper = new DatabaseHelper(this);
-        listaLibros = dbHelper.getBookDetails(); // Obtener la lista de libros desde el DatabaseHelper
+        listaLibros = dbHelper.getBookDetails();
 
+        // Crear un adaptador personalizado para la lista de libros
         adaptador = new ArrayAdapter<Libro>(this, android.R.layout.simple_list_item_1, listaLibros) {
             @Override
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+                // Inflar el diseño personalizado para cada elemento de la lista
                 if (convertView == null) {
                     convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_view, parent, false);
                 }
 
+                // Obtener referencias a los elementos de la vista
                 TextView titleTextView = convertView.findViewById(R.id.titleTextView);
                 TextView pagesTextView = convertView.findViewById(R.id.pagesTextView);
                 ImageView star1 = convertView.findViewById(R.id.star1);
@@ -64,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 ImageView star4 = convertView.findViewById(R.id.star4);
                 ImageView star5 = convertView.findViewById(R.id.star5);
 
+                // Obtener el libro actual y establecer los datos en la vista
                 Libro libro = getItem(position);
                 if (libro != null) {
                     Resources resources = getResources();
@@ -73,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                     pagesTextView.setText(paginas + " " + libro.getPaginas());
                     int rating = libro.getValoracion();
 
-                    // Define la visibilidad de cada estrella basada en la puntuación
+                    // Establecer la visibilidad de las estrellas de acuerdo a la puntuación
                     if (rating >= 2) {
                         star1.setImageResource(R.drawable.star_full);
                     } else if (rating == 1) {
@@ -117,11 +126,15 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        // Configurar el adaptador en la ListView
         ListView lalista = findViewById(R.id.listViewBooks);
         lalista.setAdapter(adaptador);
+
+        // Manejar el evento de clic en un elemento de la lista
         lalista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Obtener el libro seleccionado y abrir la actividad DetalleLibro
                 Libro libroSeleccionado = listaLibros.get(position);
 
                 Intent intent = new Intent(view.getContext(), DetalleLibro.class);
@@ -137,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
+        // Verificar si ha cambiado el idioma o el modo oscuro
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String savedLanguage = prefs.getString(Configuracion.LANGUAGE_PREF, "");
         String currentLanguage = getResources().getConfiguration().locale.getLanguage();
@@ -145,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = prefs.edit();
             editor.putString(Configuracion.LANGUAGE_PREF, currentLanguage);
             editor.apply();
-            recreate();
+            recreate(); // Reconstruir la actividad para aplicar los cambios en el idioma
             return;
         }
 
@@ -155,20 +169,25 @@ public class MainActivity extends AppCompatActivity {
 
         if (currentNightMode != newNightMode) {
             AppCompatDelegate.setDefaultNightMode(newNightMode);
-            recreate();
+            recreate(); // Reconstruir la actividad para aplicar los cambios en el modo oscuro
             return;
         }
 
+        // Actualizar la lista de libros y el adaptador
         listaLibros.clear();
         listaLibros.addAll(dbHelper.getBookDetails());
         adaptador.notifyDataSetChanged();
 
+        // Actualizar el texto del botón de añadir libro
         Button btnAddBook = findViewById(R.id.btnAddBook);
         btnAddBook.setText(R.string.añadir_libro);
     }
+
+    // Manejador de inicio de actividad para el lanzamiento de actividades con resultados
     ActivityResultLauncher<Intent> startActivityIntent = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override
         public void onActivityResult(ActivityResult result) {
+            // Actualizar la lista de libros después de añadir un nuevo libro
             if (result.getResultCode() == RESULT_OK){
                 listaLibros.clear();
                 listaLibros.addAll(dbHelper.getBookDetails());
@@ -177,12 +196,16 @@ public class MainActivity extends AppCompatActivity {
         }
     });
 
+    // Método llamado al hacer clic en el botón de añadir libro
     public void onAñadirLibro(View v) {
+        // Lanzar la actividad NewBookActivity para añadir un nuevo libro
         Intent i = new Intent(v.getContext(), NewBookActivity.class);
         startActivityIntent.launch(i);
     }
 
+    // Método llamado al hacer clic en el botón de configuración
     public void onAñadirConfig(View v) {
+        // Lanzar la actividad Configuracion
         Intent i = new Intent(v.getContext(), Configuracion.class);
         startActivityIntent.launch(i);
     }

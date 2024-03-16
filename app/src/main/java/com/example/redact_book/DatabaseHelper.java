@@ -1,4 +1,5 @@
 package com.example.redact_book;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -9,9 +10,11 @@ import android.util.Log;
 import java.util.ArrayList;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
+    // Nombre y versión de la base de datos
     private static final String DATABASE_NAME = "Libros.db";
     private static final int DATABASE_VERSION = 1;
 
+    // Sentencia SQL para crear la tabla de libros
     private static final String SQL_CREATE_TABLE =
             "CREATE TABLE Libros (" +
                     "id INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -20,25 +23,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     "valoracion INTEGER" +
                     ")";
 
+    // Constructor de la clase
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    // Método para crear la tabla cuando se crea la base de datos por primera vez
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_TABLE);
     }
 
+    // Método para actualizar la base de datos
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        // No se necesita implementar aquí ya que es la primera versión
     }
 
+    // Método para eliminar todos los libros de la base de datos
     public void deleteAllBooks() {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete("Libros", null, null);
         db.close();
     }
 
+    // Método para obtener los detalles de todos los libros de la base de datos
     public ArrayList<Libro> getBookDetails() {
         ArrayList<Libro> listaLibros = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -59,15 +68,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return listaLibros;
     }
 
+    // Método para eliminar un libro por su título
     public void eliminarLibro(String titulo) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete("Libros", "titulo = ?", new String[]{titulo});
         db.close();
     }
 
+    // Método para actualizar la información de un libro
     public void actualizarLibro(String tituloAntiguo, String tituloNuevo, int paginas, int valoracion) {
         SQLiteDatabase db = this.getWritableDatabase();
-
 
         String[] projection = {"id"};
         String selection = "titulo = ?";
@@ -98,6 +108,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    // Método para obtener los detalles de un libro por su título
     public Libro getBookDetailsByTitle(String titulo) {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -119,6 +130,4 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return libro;
     }
-
-
 }

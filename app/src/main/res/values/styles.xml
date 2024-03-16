@@ -1,79 +1,91 @@
 <resources>
+    <!-- Estilos para el tema claro -->
     <style name="AppTheme.Light" parent="Theme.AppCompat.Light">
-        <item name="android:windowBackground">@color/white</item>
-        <item name="buttonStyle">@style/Button.Light</item>
-        <item name="itemTextColor">@style/TextView.Light</item>
-        <item name="editTextStyle">@style/EditText.Light</item>
-        <item name="alertDialogTheme">@style/AlertDialog.Light</item>
+        <item name="android:windowBackground">@color/white</item> <!-- Fondo de la ventana -->
+        <item name="buttonStyle">@style/Button.Light</item> <!-- Estilo de los botones -->
+        <item name="itemTextColor">@style/TextView.Light</item> <!-- Color de texto de los elementos -->
+        <item name="editTextStyle">@style/EditText.Light</item> <!-- Estilo de los EditText -->
+        <item name="alertDialogTheme">@style/AlertDialog.Light</item> <!-- Tema de los cuadros de diálogo -->
     </style>
 
+    <!-- Estilos para el tema oscuro -->
     <style name="AppTheme.Dark" parent="Theme.AppCompat">
-        <item name="android:windowBackground">@color/black</item>
-        <item name="buttonStyle">@style/Button.Dark</item>
-        <item name="itemTextColor">@style/TextView.Dark</item>
-        <item name="editTextStyle">@style/EditText.Dark</item>
-        <item name="alertDialogTheme">@style/AlertDialog.Dark</item>
+        <item name="android:windowBackground">@color/black</item> <!-- Fondo de la ventana -->
+        <item name="buttonStyle">@style/Button.Dark</item> <!-- Estilo de los botones -->
+        <item name="itemTextColor">@style/TextView.Dark</item> <!-- Color de texto de los elementos -->
+        <item name="editTextStyle">@style/EditText.Dark</item> <!-- Estilo de los EditText -->
+        <item name="alertDialogTheme">@style/AlertDialog.Dark</item> <!-- Tema de los cuadros de diálogo -->
     </style>
 
+    <!-- Estilo para botones en tema claro -->
     <style name="Button.Light" parent="Widget.AppCompat.Button">
-        <item name="android:textColor">@color/black</item>
-        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item> <!-- Color del texto -->
+        <item name="android:background">@color/white</item> <!-- Fondo del botón -->
     </style>
 
+    <!-- Estilo para botones en tema oscuro -->
     <style name="Button.Dark" parent="Widget.AppCompat.Button">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:background">@color/black</item>
+        <item name="android:textColor">@color/white</item> <!-- Color del texto -->
+        <item name="android:background">@color/black</item> <!-- Fondo del botón -->
     </style>
 
+    <!-- Estilo para TextView en tema claro -->
     <style name="TextView.Light" parent="Widget.AppCompat.TextView">
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/black</item> <!-- Color del texto -->
     </style>
 
+    <!-- Estilo para TextView en tema oscuro -->
     <style name="TextView.Dark" parent="Widget.AppCompat.TextView">
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/white</item> <!-- Color del texto -->
     </style>
 
+    <!-- Estilo para EditText en tema claro -->
     <style name="EditText.Light" parent="Widget.AppCompat.EditText">
-        <item name="android:textColor">@color/black</item>
-        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:textColor">@color/black</item> <!-- Color del texto -->
+        <item name="android:backgroundTint">@color/black</item> <!-- Tinte del fondo -->
     </style>
 
+    <!-- Estilo para EditText en tema oscuro -->
     <style name="EditText.Dark" parent="Widget.AppCompat.EditText">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/white</item> <!-- Color del texto -->
+        <item name="android:backgroundTint">@color/white</item> <!-- Tinte del fondo -->
     </style>
 
+    <!-- Estilo para AlertDialog en tema claro -->
     <style name="AlertDialog.Light" parent="Theme.AppCompat.Dialog.Alert">
-        <item name="android:windowBackground">@color/light_gray</item>
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:textColorPrimary">@android:color/black</item>
-        <item name="android:buttonBarPositiveButtonStyle">@style/AlertDialogButton.Light.Positive</item>
-        <item name="android:buttonBarNegativeButtonStyle">@style/AlertDialogButton.Light.Negative</item>
+        <item name="android:windowBackground">@color/light_gray</item> <!-- Fondo de la ventana -->
+        <item name="android:textColor">@android:color/black</item> <!-- Color del texto -->
+        <item name="android:textColorPrimary">@android:color/black</item> <!-- Color primario del texto -->
+        <item name="android:buttonBarPositiveButtonStyle">@style/AlertDialogButton.Light.Positive</item> <!-- Estilo de botón de confirmar -->
+        <item name="android:buttonBarNegativeButtonStyle">@style/AlertDialogButton.Light.Negative</item> <!-- Estilo de botón de cancelar -->
     </style>
 
+    <!-- Estilo para AlertDialog en tema oscuro -->
     <style name="AlertDialog.Dark" parent="Theme.AppCompat.Dialog.Alert">
-        <item name="android:windowBackground">@color/dark_gray</item>
-        <item name="android:textColor">@android:color/white</item>
-        <item name="android:textColorPrimary">@android:color/white</item>
-        <item name="android:buttonBarPositiveButtonStyle">@style/AlertDialogButton.Dark.Positive</item>
-        <item name="android:buttonBarNegativeButtonStyle">@style/AlertDialogButton.Dark.Negative</item>
+        <item name="android:windowBackground">@color/dark_gray</item> <!-- Fondo de la ventana -->
+        <item name="android:textColor">@android:color/white</item> <!-- Color del texto -->
+        <item name="android:textColorPrimary">@android:color/white</item> <!-- Color primario del texto -->
+        <item name="android:buttonBarPositiveButtonStyle">@style/AlertDialogButton.Dark.Positive</item> <!-- Estilo de botón de confirmar -->
+        <item name="android:buttonBarNegativeButtonStyle">@style/AlertDialogButton.Dark.Negative</item> <!-- Estilo de botón de cancelar -->
     </style>
 
+    <!-- Estilo para botón de confirmar en AlertDialog en tema claro -->
     <style name="AlertDialogButton.Light.Positive" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
-        <item name="android:textColor">@android:color/black</item> <!-- Cambiar color del texto del botón de confirmar en tema claro -->
+        <item name="android:textColor">@android:color/black</item> <!-- Color del texto -->
     </style>
 
+    <!-- Estilo para botón de cancelar en AlertDialog en tema claro -->
     <style name="AlertDialogButton.Light.Negative" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
-        <item name="android:textColor">@android:color/black</item> <!-- Cambiar color del texto del botón de denegar en tema claro -->
+        <item name="android:textColor">@android:color/black</item> <!-- Color del texto -->
     </style>
 
+    <!-- Estilo para botón de confirmar en AlertDialog en tema oscuro -->
     <style name="AlertDialogButton.Dark.Positive" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
-        <item name="android:textColor">@android:color/white</item> <!-- Cambiar color del texto del botón de confirmar en tema oscuro -->
+        <item name="android:textColor">@android:color/white</item> <!-- Color del texto -->
     </style>
 
+    <!-- Estilo para botón de cancelar en AlertDialog en tema oscuro -->
     <style name="AlertDialogButton.Dark.Negative" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
-        <item name="android:textColor">@android:color/white</item> <!-- Cambiar color del texto del botón de denegar en tema oscuro -->
+        <item name="android:textColor">@android:color/white</item> <!-- Color del texto -->
     </style>
-
-
 </resources>

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- TextView para mostrar el título "Editar libro" -->
     <TextView
         android:id="@+id/textEditar"
         android:layout_width="wrap_content"
@@ -13,6 +14,7 @@
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true" />
 
+    <!-- TextView para mostrar el texto "Título" -->
     <TextView
         android:id="@+id/textTitulo"
         style="?attr/itemTextColor"
@@ -24,6 +26,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp" />
 
+    <!-- TextView para mostrar el texto "Páginas" -->
     <TextView
         android:id="@+id/textPaginas"
         android:layout_width="wrap_content"
@@ -35,6 +38,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="20dp" />
 
+    <!-- TextView para mostrar el texto "Valoración" -->
     <TextView
         android:id="@+id/textValoracion"
         android:layout_width="wrap_content"
@@ -46,6 +50,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="20dp" />
 
+    <!-- EditText para ingresar o editar el título del libro -->
     <EditText
         android:id="@+id/editTitulo"
         android:layout_width="match_parent"
@@ -61,6 +66,7 @@
         android:visibility="invisible"
         android:enabled="false" />
 
+    <!-- EditText para ingresar o editar el número de páginas del libro -->
     <EditText
         android:id="@+id/editPaginas"
         android:layout_width="match_parent"
@@ -76,6 +82,7 @@
         android:visibility="invisible"
         android:enabled="false" />
 
+    <!-- EditText para ingresar o editar la valoración del libro -->
     <EditText
         android:id="@+id/editValoracion"
         android:layout_width="match_parent"
@@ -91,7 +98,7 @@
         android:visibility="invisible"
         android:enabled="false" />
 
-
+    <!-- Botón para editar -->
     <Button
         android:id="@+id/btnEditar"
         android:layout_width="wrap_content"
@@ -102,6 +109,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
 
+    <!-- Botón para borrar -->
     <Button
         android:id="@+id/btnBorrar"
         android:layout_width="wrap_content"
@@ -112,7 +120,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
 
-
+    <!-- Botón para guardar -->
     <Button
         android:id="@+id/btnGuardar"
         android:layout_width="wrap_content"
@@ -124,8 +132,7 @@
         android:layout_marginTop="20dp"
         android:visibility="gone" />
 
-
-
+    <!-- Botón para volver -->
     <Button
         android:id="@+id/botonVolver"
         android:layout_width="48dp"
