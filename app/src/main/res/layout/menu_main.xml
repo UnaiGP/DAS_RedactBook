@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_centerInParent="true"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="RelativeOverlap">
 
         <!-- Título de la aplicación -->
         <TextView
@@ -25,6 +26,30 @@
             android:textStyle="bold"
             android:layout_gravity="center"
             tools:visibility="visible" />
+
+        <!-- Texto para seleccionar idioma -->
+        <TextView
+            android:id="@+id/profile_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/foto_de_perfil"
+            style="?attr/itemTextColor"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Image View para la foto de perfil -->
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:contentDescription="@string/profile_image_desc"
+            android:onClick="showChangePhotoDialog"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_profile_image"
+            tools:ignore="ImageContrastCheck" />
+
 
         <!-- Texto para seleccionar idioma -->
         <TextView
@@ -103,6 +128,17 @@
             android:textOn="Modo oscuro"
             tools:ignore="UseSwitchCompatOrMaterialXml" />
 
+        <!-- Botón para cerrar sesión -->
+        <Button
+            android:id="@+id/btn_logout"
+            style="?attr/buttonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/cerrar_sesi_n" />
+
     </LinearLayout>
 
     <!-- Botón para volver atrás -->
@@ -118,6 +154,21 @@
         android:background="@drawable/ic_home"
         android:drawableStart="@drawable/ic_home"
         android:text="Volver"
+        tools:ignore="TextSizeCheck" />
+
+    <!-- Botón para mapa -->
+    <Button
+        android:id="@+id/mapa"
+        style="?attr/buttonStyle"
+        android:layout_width="82dp"
+        android:layout_height="61dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="-27dp"
+        android:background="@drawable/google_maps_icon_logo_wine"
+        android:clickable="true"
+        android:drawableStart="@drawable/google_maps_icon_logo_wine"
         tools:ignore="TextSizeCheck" />
 
 </RelativeLayout>

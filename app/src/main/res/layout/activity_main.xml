@@ -6,6 +6,8 @@
     tools:context=".MainActivity">
 
     <!-- Layout que contiene el encabezado -->
+
+    <!-- Botón para añadir un libro -->
     <LinearLayout
         android:id="@+id/topLayout"
         android:layout_width="match_parent"
@@ -24,20 +26,19 @@
             <!-- TextView para mostrar el nombre de la aplicación -->
             <TextView
                 android:id="@+id/appNameTextView"
+                style="?attr/itemTextColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="@string/redactbook"
                 android:textSize="24sp"
-                style="?attr/itemTextColor"
                 android:textStyle="bold"
-                android:layout_gravity="center"
                 tools:visibility="visible" />
 
         </FrameLayout>
 
     </LinearLayout>
 
-    <!-- Botón para añadir un libro -->
     <Button
         android:id="@+id/btnAddBook"
         android:layout_width="wrap_content"

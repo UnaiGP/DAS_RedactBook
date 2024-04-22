@@ -1,125 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Define el diseño de la pantalla de configuración -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Diseño centrado -->
+    <!-- Layout que contiene los elementos centrados horizontalmente -->
     <LinearLayout
         android:id="@+id/centered_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:gravity="center">
+        tools:ignore="RelativeOverlap">
 
         <!-- Título de la aplicación -->
         <TextView
             android:id="@+id/appNameTextView"
+            style="?attr/itemTextColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="@string/configuraci_n"
             android:textSize="24sp"
-            style="?attr/itemTextColor"
             android:textStyle="bold"
-            android:layout_gravity="center"
             tools:visibility="visible" />
 
-        <!-- Selector de idioma -->
+        <!-- Texto para seleccionar idioma -->
         <TextView
-            android:id="@+id/language_selection_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/elegir_idioma"
+            android:id="@+id/profile_text"
             style="?attr/itemTextColor"
-            android:textSize="18sp"
-            android:layout_marginBottom="16dp" />
-
-        <!-- Botones de idioma -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:weightSum="1">
-
-            <!-- Botón Español -->
-            <Button
-                android:id="@+id/btn_spanish"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.33"
-                android:text="@string/espa_ol"
-                style="?attr/buttonStyle"
-                android:layout_marginEnd="8dp"/>
-
-            <!-- Botón Inglés -->
-            <Button
-                android:id="@+id/btn_english"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.33"
-                android:text="@string/ingl_s"
-                style="?attr/buttonStyle"
-                android:layout_marginEnd="8dp"/>
-
-            <!-- Botón Euskera -->
-            <Button
-                android:id="@+id/btn_euskera"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.34"
-                android:text="@string/euskera"
-                style="?attr/buttonStyle"/>
-
-        </LinearLayout>
-        <!-- Fin de los botones de idioma -->
-
-        <!-- Texto para borrar datos -->
-        <TextView
-            android:id="@+id/borrar_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/borrar_bbdd"
-            style="?attr/itemTextColor"
-            android:textSize="18sp"
-            android:layout_marginBottom="16dp" />
-
-        <!-- Botón para borrar datos -->
-        <Button
-            android:id="@+id/btn_delete_data"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="?attr/buttonStyle"
-            android:text="@string/borrar_datos_bot"
-            android:layout_marginBottom="16dp"/>
-
-        <!-- Etiqueta de cambio de modo -->
-        <TextView
-            android:id="@+id/text_switch_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cambiar_modo"
-            style="?attr/itemTextColor"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp" />
-
-        <!-- Interruptor de modo oscuro/mode claro -->
-        <Switch
-            android:id="@+id/switch_dark_mode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:checked="false"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            android:textOff="Modo claro"
-            android:textOn="Modo oscuro"
-            tools:ignore="UseSwitchCompatOrMaterialXml" />
+            android:text="@string/foto_de_perfil"
+            android:textSize="18sp" />
 
+        <!-- Image View para la foto de perfil -->
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="54dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="0dp"
+            android:clickable="true"
+            android:contentDescription="@string/profile_image_desc"
+            android:onClick="showChangePhotoDialog"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_profile_image"
+            tools:ignore="ImageContrastCheck" />
+
+        <!-- Texto para seleccionar idioma -->
+        <TextView
+            android:id="@+id/language_selection_text"
+            style="?attr/itemTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:text="@string/elegir_idioma"
+            android:textSize="18sp" />
+
+        <!-- Layout horizontal para los botones de idioma -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_spanish"
+                style="?attr/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="@string/espa_ol" />
+
+            <Button
+                android:id="@+id/btn_english"
+                style="?attr/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="@string/ingl_s" />
+
+            <Button
+                android:id="@+id/btn_euskera"
+                style="?attr/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/euskera" />
+        </LinearLayout>
+
+        <!-- Layout horizontal para los botones de idioma -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <!-- Texto para borrar datos -->
+            <TextView
+                android:id="@+id/borrar_text"
+                style="?attr/itemTextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/borrar_bbdd"
+                android:textSize="18sp" />
+
+            <!-- Botón para borrar datos -->
+            <Button
+                android:id="@+id/btn_delete_data"
+                style="?attr/buttonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/borrar_datos_bot" />
+
+            <!-- Texto para cambiar modo -->
+            <TextView
+                android:id="@+id/text_switch_label"
+                style="?attr/itemTextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/cambiar_modo"
+                android:textSize="18sp" />
+
+            <!-- Interruptor para cambiar entre modos claro y oscuro -->
+            <Switch
+                android:id="@+id/switch_dark_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:minWidth="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:minHeight="48dp"
+                android:textOff="Modo claro"
+                android:textOn="Modo oscuro"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <!-- Botón para cerrar sesión -->
+            <Button
+                android:id="@+id/btn_logout"
+                style="?attr/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/cerrar_sesi_n" />
+        </LinearLayout>
     </LinearLayout>
 
-    <!-- Botón Volver -->
+    <!-- Botón para volver atrás -->
     <Button
         android:id="@+id/botonVolver"
         style="?attr/buttonStyle"
@@ -132,6 +175,21 @@
         android:background="@drawable/ic_home"
         android:drawableStart="@drawable/ic_home"
         android:text="Volver"
+        tools:ignore="TextSizeCheck" />
+
+    <!-- Botón para mapa -->
+    <Button
+        android:id="@+id/mapa"
+        style="?attr/buttonStyle"
+        android:layout_width="82dp"
+        android:layout_height="61dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="-27dp"
+        android:background="@drawable/google_maps_icon_logo_wine"
+        android:clickable="true"
+        android:drawableStart="@drawable/google_maps_icon_logo_wine"
         tools:ignore="TextSizeCheck" />
 
 </RelativeLayout>

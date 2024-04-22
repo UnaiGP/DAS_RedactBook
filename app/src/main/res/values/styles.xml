@@ -58,6 +58,7 @@
         <item name="android:textColorPrimary">@android:color/black</item> <!-- Color primario del texto -->
         <item name="android:buttonBarPositiveButtonStyle">@style/AlertDialogButton.Light.Positive</item> <!-- Estilo de botón de confirmar -->
         <item name="android:buttonBarNegativeButtonStyle">@style/AlertDialogButton.Light.Negative</item> <!-- Estilo de botón de cancelar -->
+        <item name="android:textColorAlertDialogListItem">@android:color/black</item> <!-- Estilo de botón de cancelar -->
     </style>
 
     <!-- Estilo para AlertDialog en tema oscuro -->
@@ -67,6 +68,8 @@
         <item name="android:textColorPrimary">@android:color/white</item> <!-- Color primario del texto -->
         <item name="android:buttonBarPositiveButtonStyle">@style/AlertDialogButton.Dark.Positive</item> <!-- Estilo de botón de confirmar -->
         <item name="android:buttonBarNegativeButtonStyle">@style/AlertDialogButton.Dark.Negative</item> <!-- Estilo de botón de cancelar -->
+        <item name="android:textColorAlertDialogListItem">@android:color/white</item> <!-- Estilo de botón de cancelar -->
+
     </style>
 
     <!-- Estilo para botón de confirmar en AlertDialog en tema claro -->
@@ -88,4 +91,5 @@
     <style name="AlertDialogButton.Dark.Negative" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
         <item name="android:textColor">@android:color/white</item> <!-- Color del texto -->
     </style>
-</resources>
+
+    </resources>
