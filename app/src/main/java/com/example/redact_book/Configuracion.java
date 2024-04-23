@@ -563,7 +563,7 @@ public class Configuracion extends AppCompatActivity {
             if (bitmap != null) {
                 imageView.setImageBitmap(bitmap);
             } else {
-                Toast.makeText(Configuracion.this, getString(R.string.dwl_error), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Configuracion.this, getString(R.string.dwl_error), Toast.LENGTH_SHORT).show();
             }
         }
     }
