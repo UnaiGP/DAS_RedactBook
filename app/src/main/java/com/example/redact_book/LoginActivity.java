@@ -42,7 +42,8 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         setContentView(R.layout.login_layout);
-
+        String languageCode = "en"; // Inglés por defecto
+        prefs.edit().putString(Configuracion.LANGUAGE_PREF, languageCode).apply(); // Guardar el valor predeterminado en SharedPreferences
         // Inicializar vistas
         usernameEditText = findViewById(R.id.usernameEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
